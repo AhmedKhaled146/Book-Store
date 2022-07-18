@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block body %}
+    {% block style %}
+    <style type="text/css">
+        body{
+            background-color: #c9c9c963;
+        }
+    </style>
+    {% endblock style%}
+<section class="contact" id="contact">
+  <h1 class="heading"><span>Contact US</span></h1>
+  <div class="contact-form">
+    <h2>" hello my dear if you need to send massage or there was any issue you can send massage "</h2>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <input type="text" name="subject" placeholder="Enter subject" class="input-main"/>
+      <input type="email" name="email"  placeholder="Enter your email" class="input-main"/>
+      <textarea name="message" placeholder="Enter your Massage" class="input-main"></textarea>
+      <input type="submit" value="Send Massage" />
+    </form>
+  </div>
+</section>
+
+{% endblock body%}

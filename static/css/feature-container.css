@@ -1,0 +1,249 @@
+.books-containr {
+  width: 100%;
+  height: 100%;
+  background-color:#f5f7fa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.books-containr .filter-left {
+  margin: 20px 0 0 20px;
+}
+.books-containr .filter-left .filter {
+  border-right: 2px solid black;
+  height: 100vh;
+}
+.books-containr .filter-left .filter h2 {
+  margin: 20px 0 40px;
+  line-height: 1.6;
+}
+.books-containr .filter-left .filter .form {
+  border: 2px solid black;
+  line-height: 2;
+  background-color: #ececec82;
+  margin: 20px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.books-containr .filter-left .filter form label {
+  font-size: 30px;
+}
+
+.books-containr .filter-left .filter form [type="search"] {
+  border: 2px solid var(--main-color);
+  height: 30px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 5px 20px;
+}
+.books-containr .filter-left .filter form select {
+  font-size: 20px;
+  margin: 10px;
+  color: var(--black);
+}
+.books-containr .filter-left .filter form [type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  /* border: 2px solid var(--main-color); */
+  border-radius: 15px;
+  background: var(--main-color);
+  color: white;
+  border: 2px solid var(--light-color);
+  transition: var(--transition);
+  cursor: pointer;
+  margin-top: 20px;
+}
+.books-containr .filter-left .filter form [type="submit"]:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+/* end filter */
+
+.books-containr .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+.books-containr .container .box {
+  background-color: white;
+  flex-basis: calc(25%);
+  width: 170px;
+  height: 350px;
+  position: relative;
+  margin-bottom: 5px;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  transition: all 0.3s linear;
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.books-containr .container .box .raet {
+  margin: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  left: 10%;
+  top: 0%;
+}
+.books-containr .container .box .image img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.books-containr .container .box .text h2 {
+  margin: 15px 0 15px;
+  font-size: 20px;
+  transition: 0.3s;
+  position: absolute;
+  left: 50%;
+  top: 71%;
+  transform: translate(-50%, -50%);
+  color: var(--black);
+}
+.books-containr .container .box .text h2 :hover {
+  color: var(--light-color);
+  text-decoration: underline;
+}
+
+.books-containr .container .box .text .pragraph {
+  color: var(--light-color);
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 94%;
+  transform: translate(-50%, -50%);
+}
+.books-containr .container .box .text .pragraph:hover {
+  margin-top: -5px;
+
+  text-decoration: underline;
+}
+
+.books-containr .container .box .raet i {
+  color: yellow;
+}
+.books-containr .container .box:hover {
+  border-color: var(--main-color) !important;
+  color: var(--main-color) !important;
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 25px -6px rgba(0, 0, 0, 0.1),
+    0 10px 12px -6px rgba(0, 0, 0, 0.05) !important;
+}
+/* start media query */
+@media (max-width: 991px) {
+  .books-containr .container .box {
+    flex-basis: 45%;
+    font-size: 14px;
+  }
+  .books-containr .container .box .image img {
+    width: 100px;
+  }
+  .books-containr .container .box .text h2,
+  .books-containr .container .box .text .pragraph {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .books-containr .container .box .image img {
+    width: 150px;
+  }
+  .books-containr {
+    flex-direction: column;
+  }
+}
+/* pagination */
+.pagination_wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination_wrap ul li {
+  display: inline-block;
+}
+
+.pagination_wrap ul li a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #EAEAEA;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 38px;
+  display: inline-block;
+  color: #AAB1B7;
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+.pagination_wrap ul li a i {
+  line-height: 38px;
+}
+
+.pagination_wrap ul li a span {
+  line-height: 38px;
+}
+
+.pagination_wrap ul li a:hover {
+  border-color: #00D363;
+  color: #00D363;
+}
+
+/* filter */
+.job_listing_area {
+  background: #F5F7FA;
+  padding-bottom: 80px;
+}
+
+.job_listing_area.plus_padding {
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  .job_listing_area.plus_padding {
+    padding-top: 60px;
+  }
+}
+
+.job_listing_area .job_filter {
+  padding: 25px;
+  display: block;
+}
+
+.job_listing_area .job_filter h3 {
+  font-size: 25px;
+  margin-bottom: 25px;
+  color: #001D38;
+  font-weight: 400;
+  text-align: center;
+}
+
+.job_listing_area .job_filter .form_inner .single_field input {
+  height: 60px;
+  border: 1px solid #E8E8E8;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}

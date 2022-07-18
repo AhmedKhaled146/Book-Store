@@ -1,0 +1,125 @@
+{% load static %}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>{{title}}</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+      {% comment %} <!-- custom css file link  --> {% endcomment %}
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    </head>
+    <body>
+      <header class="header">
+        <div class="header-1">
+          <a href="#" class="logo">
+            <i class="fas fa-book-reader" style="color: blue"></i> Book store
+          </a>
+          <div class="header-2">
+            <nav class="navbar">
+              <a href="{% url 'index' %}">Home</a>
+              <a href="{% url 'All_Books:books' %}">All books</a>
+              <a href="{% url 'about us' %}">About US</a>
+              <a href="{% url 'contact us' %}">Contact Us</a>
+            </nav>
+          </div>
+          <div class="icons"></div>
+        </div>
+      </header>
+    </body>
+    {% block body%} {% endblock body%}
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>our locations</h3>
+          <a href="#">
+            <i class="fa-solid fa-location-dot" style="color: rgb(74, 74, 246)"></i>
+            Egypt ,Tanta University
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-location-dot" style="color: rgb(74, 74, 246)"></i>
+            USA
+          </a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home">
+            <i class="fa-solid fa-arrow-right" style="color: rgb(74, 74, 246)"></i>
+            home
+          </a>
+          <a href="#featured">
+            <i class="fa-solid fa-arrow-right" style="color: rgb(74, 74, 246)"></i>
+            featured
+          </a>
+          <a href="feature-container.html">
+            <i class="fa-solid fa-arrow-right" style="color: rgb(74, 74, 246)" ></i>
+            all Books</a
+          >
+          <a href="#deal">
+            <i class="fa-solid fa-arrow-right" style="color: rgb(74, 74, 246)" ></i>
+            About
+          </a>
+          <a href="#reviews">
+            <i class="fa-solid fa-arrow-right" style="color: rgb(74, 74, 246)" ></i>
+            reviews
+          </a>
+          <a href="#contact">
+            <i class="fa-solid fa-arrow-right" style="color: rgb(74, 74, 246)" ></i>
+            contact
+          </a>
+        </div>
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#">
+            <i class="fa-solid fa-phone" style="color: rgb(74, 74, 246)"></i>
+            +123-456-7890
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-phone" style="color: rgb(74, 74, 246)"></i>
+            +201204303598
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-envelope" style="color: rgb(74, 74, 246)"></i>
+            book Store@gmail.com
+          </a>
+          <img src="{% static 'image/worldmap.png' %}" class="map" alt="" />
+        </div>
+      </div>
+      <div class="socail_links" style="text-align: center">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-facebook-f" style="color: blue"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-google" style="color: blue"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-twitter" style="color: blue"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-instagram" style="color: blue"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="credit">
+        created by &#128151;<span>"Friends &trade;"</span> | all rights
+        reserved!:&copy;
+      </div>
+    </section>
+  {% comment %} 
+      <script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/all.min.js' %}"></script>
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script> {% endcomment %}
+  </html>

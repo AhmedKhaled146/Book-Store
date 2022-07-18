@@ -1,0 +1,311 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <p>Welcome to </p>
+                <h3>Book store</h3>
+                <p>"  the book store page have a biggest library it's contains  many books in many fields
+                such as (computer science , Programming languege , scientific ,religion , literature ,
+                police Books ,mathematicals, psychology , love srories ,... ) you can see all books 
+                from click on * all Book *        "
+                </p>
+                <a href="{% url 'All_Books:books' %}" class="btn">All Books</a>
+            </div>
+            <div class=" books-slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="book"><img src="{% static 'image/book-1.png' %}" alt=""></a>
+                    <a href="#" class="book"><img src="{% static 'image/book-2.png' %}" alt=""></a>
+                    <a href="#" class="book"><img src="{% static 'image/book-3.png' %}" alt=""></a>
+                </div>
+                <img src="{% static 'image/stand.png' %}" class="stand" alt="">
+            </div>
+        </div>
+    </section>
+<!-- ================================================================================= -->
+    <section class="featured" id="featured">
+        <h1 class="heading"> <span>featured books</span> </h1>
+        {% comment %} <!-- programing books --> {% endcomment %}
+        <div class=" featured-slider">
+            <a href="{% url 'All_Books:books' %}" class="pro"> -- Programming Books -- </a>
+            <div class="container" id="swiper-wrapper">
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'image/book-1.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> HTML book </h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'image/book-2.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> Artificial Intelligence</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'image/book-3.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> Basic Algorithm</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'image/book-4.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Network Security</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'image/book-5.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> Cyper Securite</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% comment %} <!-- scientific books --> {% endcomment %}
+        <div class="swiper featured-slider">
+            <a href="{% url 'All_Books:books' %}"> -- scientific Books --</a>
+            <div class="container" id="scientific books">
+                <div class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book-6.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> Margie Meacham</h3>
+                    </div>
+                </div>
+                <div class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book-7.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> Scientific Investigation</h3>
+                    </div>
+                </div>
+                <div class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book-8.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Advance Of CS</h3>
+                    </div>
+                </div>
+                <div class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book-9.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>The Power Of Your Mind</h3>    
+                    </div>
+                </div>
+                <div class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book-10.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Wommen Science</h3>
+                    </div>
+                </div>
+            </div>
+    </section> 
+<!-- ================================================================================= -->
+    <section class="home" style="text-align: right; 
+                                 background:url({% static 'image/letter-bg.jpg' %}) no-repeat; 
+                                 background-size: cover; 
+                                 background-position: center; 
+                                 background-attachment: fixed;
+                                 height: 500px;" >
+        <div class="row">
+                <div class="content"><br><br><br><br><br><br><br><br>
+                    <h3 style="color: white;">Book store</h3>
+                    <p style="color: white;">" You Will Find alot of Books That Help You in Your Travel. "</p>
+                    <a href="{% url 'about us' %}" class="btn">Learn More</a>
+                </div>
+        </div>
+    </section>
+<!-- ================================================================================= -->
+    <section class="arrivals" id="arrivals">
+        <h1 class="heading"> new arrival </h1>
+        <div class=" arrivals-slider">
+            <div class="container">
+                <a href="books.html" class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book5.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">free</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="feature-container.html" class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book3.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">free</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="feature-container.html" class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book7.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+
+            </div>
+
+        </div>
+
+        <div class="swiper arrivals-slider">
+
+            <div class="container">
+
+                <a href="feature-container.html" class=" box">
+                    <div class="image">
+                        <img src="{% static 'image/book-2.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="feature-container.html" class="swiper-slide box">
+                    <div class="image">
+                        <img src="{% static 'image/book-3.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="feature-container.html" class="swiper-slide box">
+                    <div class="image">
+                        <img src="{% static 'image/book-5.png' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+<!-- ================================================================================= -->
+    <section class="deal" id="deal">
+        <div class="content">
+            <h3>hello to </h3>
+            <h1>"  book store  "</h1>
+            <p>" this store you can read and dowenload all books you need in a lot of departments 
+                if you need to know more you can click in the "<i>Learn More</i>"  "</p>
+            <a href="{% url 'about us' %}" class="btn">Learn More</a>
+        </div>
+        <div class="image">
+            <img src="{% static 'image/deal-img.jpg' %}" alt="image">
+        </div>
+    </section>
+<!-- ================================================================================= -->
+    <section class="reviews" id="reviews">
+        <h1 class="heading"> <span>client's reviews</span> </h1>
+        <div class=" reviews-slider">
+            <div class="container">
+                {% for person_review in review %}
+                    {% if person_review.active %}
+                        <div class="box">
+                            <img src="{{person_review.image.url}}" alt="">
+                            <h3> {{person_review.name}} </h3>
+                            <p> {{person_review.review}} </p>
+                            <div class="stars">
+                                <h4>{{person_review.rate}}</h4>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+<!-- ================================================================================ -->
+    <section class="three">
+        <div class="nums">
+            <div class="box">
+                <i class="fas fa-book-reader" style="color: blue;"></i>
+                <div class="num" data-goal="50">+10</div>
+                <p> All Books </p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-users" style="color: blue;"></i>
+                <div class="num" data-goal="30">+10</div>
+                <p> Visitors </p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-file-arrow-down" style="color: blue;"></i>
+                <div class="num " data-goal="100">+10</div>
+                <p> Dowenload Books</p>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

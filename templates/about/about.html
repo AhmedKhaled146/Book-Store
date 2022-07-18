@@ -1,0 +1,45 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block body %}
+    <div class="job_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="job_sumary">
+                        <div class="summery_header">
+                            <h3> <i class="fas fa-book-reader" style="color: blue;"></i> 
+                                Book-Store Information</h3>
+                        </div>
+                        <div class="job_content">
+                            <ul>
+                                <li> location : <span> Tanta University </span></li>
+                                <li> Number of Books : <span> +100 Books</span></li>
+                            </ul>
+                        </div>
+                        <div class="container">
+                            <h3 class="head">Our Mission:</h3>
+                            <p class="paragarph">{{about.mission}}</p>
+                        </div>
+                        <div class="container">
+                            <h3 class="head">Our Vision:</h3>
+                            <p class="paragarph">{{about.vision}}</p>
+                        </div>
+                        <div class="container">
+                            <h3 class="head">Our Story:</h3>
+                            <p class="paragarph">{{about.story}}</p>
+                        </div>
+                        <div class="container">
+                            <h3 class="head"> how book works :</h3>
+                            <p class="paragarph">{{about.work}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ================================================================================ -->
+    <div class="about-section">
+        <p class="para">Reading is the most thing right in this world.</p>
+        <p class="para">We give you some Books to improve your knowledge about any thing you interest.</p>
+    </div>
+{% endblock body %}

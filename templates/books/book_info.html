@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="book-info">
+        <div class="media" style="width: 60%;">
+            <div class="image">
+                <img src="{{ book_info.book_image.url }}" alt="" title="cyper-securite">
+            </div>
+            <div class="media-text">
+                <h2 class="book-name" style="Font-size: 30px"> {{book_info.book_name}}</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><span>author</span></td>
+                            <td>: {{book_info.auther}}</td>
+                        </tr>
+                        <tr>
+                            <td><span>Department</span></td>
+                            <td>: {{book_info.category}}</td>
+                        </tr>
+                        <tr>
+                            <td><span>Language</span></td>
+                            <td>: {{book_info.lang_book}}</td>
+                        </tr>
+                        <tr>
+                            <td><span>No. of Pages</span></td>
+                            <td>: {{book_info.NO_Pages}}</td>
+                        </tr>
+                        <tr>
+                            <td><span> type of file</span></td>
+                            <td>: {{book_info.book_type}}</td>
+                        </tr>
+                        <tr>
+                            <td><span>Uploaded at</span></td>
+                            <td>: {{book_info.datetime_uploaded}}</td>
+                        </tr>
+                        <tr>
+                            <td><span>Rate </span></td>
+                            <td>: {{book_info.rate}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="desc">
+        <div class="container"  style="height: 500px;">
+            <div class="text">
+                <h2 class="head">" the Description  " </h2>
+                <p>{{book_info.description}}</p>
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    <h2 class="head"> Download Book </h2>
+                    <a class ="btn" href="{{ book_info.pdf_file.url }}" download>Download Now</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

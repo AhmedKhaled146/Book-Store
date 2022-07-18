@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+{% load bootstrap4 %}
+{% load static %}
+{% block body %}
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/feature-container.css' %}">
+    {% endblock style%}
+    <section class="home" id="home">
+        <div class="row">
+            <div class="container">
+            <div class="row">
+                <h2 class="head" style="padding-left: 20%;">{{count}}+ Books Available</h2>
+            </div>
+            </div>
+        </div>
+    </section>
+    {% comment %} <!-- ================================================================================ --> {% endcomment %}
+    <div class="job_listing_area">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-2">
+                <div class="job_filter white-bg" style="padding: 0px;">
+                <div class="form_inner white-bg">
+                    <h3 style="padding-top: 10px;">Filter</h3>
+                    <form method="GET" style="font-size: 18px;">
+
+                        {% comment %} for filter my Books  {% endcomment %}
+                        {% comment %} {{ myfilter.form|crispy }} {% endcomment %}
+                        {% bootstrap_form myfilter.form %}
+                        <input class="btn col-lg-12" type="submit" value="Search">
+                    </form>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-10" style="padding: 0px;">
+                <div class="container">
+                    <div class="books-containr" style="padding: 0px;">
+                        <div class="container" >
+                            {% for book in Books %}
+                                <a href="{% url 'All_Books:book_info' book.slug %}" class="box" style="height: 350px">
+                                    <span class="raet" style="font-size: 30px;">Rate : {{ book.rate }}</span>
+                                    <div class="image">
+                                        <img style="top: 43%" src="{{ book.book_image.url }}" alt=""/>
+                                    </div>
+                                    <div class="text">
+                                        <h2 style="top: 71%;">{{ book.book_name }}</h2>  
+                                        <h2 style="top: 85%">{{ book.auther }}</h2>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% if Books.has_other_pages %}
+                    <div class="pagination_wrap">
+                        <ul>
+                            {% if Books.has_previous %}
+                                <li><a href="?page={{Books.previous_page_number}}"> <i class="fa-solid fa-chevron-left"></i> </a></li>
+                            {% endif %}
+                            {% for i in Books.paginator.page_range %}
+                                <li><a href="?page={{i}}"><span>{{i}}</span></a></li>
+                            {% endfor %}
+                            {% if Books.has_next %}
+                                <li><a href="?page={{Books.next_page_number}}"> <i class="fa-solid fa-chevron-right"></i> </a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
